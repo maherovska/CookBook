@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cookbook.Web", "Cookbook.Web\Cookbook.Web.csproj", "{67D1E03B-59FF-4E67-81C0-15B1A90414DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cookbook.Entities", "Cookbook.Entities\Cookbook.Entities.csproj", "{32B9D207-48AA-4765-9E77-FE5DB6209BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cookbook.Repositories", "Cookbook.Repositories\Cookbook.Repositories.csproj", "{49DB033B-D97A-45EF-9196-8B2739AD2FF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67D1E03B-59FF-4E67-81C0-15B1A90414DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D1E03B-59FF-4E67-81C0-15B1A90414DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D1E03B-59FF-4E67-81C0-15B1A90414DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D1E03B-59FF-4E67-81C0-15B1A90414DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B9D207-48AA-4765-9E77-FE5DB6209BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B9D207-48AA-4765-9E77-FE5DB6209BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B9D207-48AA-4765-9E77-FE5DB6209BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B9D207-48AA-4765-9E77-FE5DB6209BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49DB033B-D97A-45EF-9196-8B2739AD2FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DB033B-D97A-45EF-9196-8B2739AD2FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DB033B-D97A-45EF-9196-8B2739AD2FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DB033B-D97A-45EF-9196-8B2739AD2FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

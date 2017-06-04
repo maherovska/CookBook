@@ -1,0 +1,53 @@
+﻿<!-- The Modal -->
+<section class="modal" ng-class="$ctrl.showModal ? 'modal-opened' : ''">
+
+    <!-- Modal content -->
+    <form  name="recipe" class="modal-content" ng-submit="$ctrl.saveRecipe()" novalidate>
+        <div class="modal-header">
+            <span class="close" ng-click="$ctrl.openModal()">&times;</span>
+            <h2>{{ $ctrl.header }} recipe</h2>
+        </div>
+        <div class="modal-body">
+            <div class="input-container">
+                <label class="modal-label">Title</label>
+                <input name="title" type="text" class="modal-input" ng-model="$ctrl.recipe.title" required />
+                <div ng-show="recipe.title.$invalid && !recipe.title.$pristine" class="error-msg">Title can not be empty.</div>
+            </div>
+            <div class="input-container">
+                <label class="modal-label">Description</label>
+                <textarea name="description" class="modal-input modal-textarea" rows="3" ng-model="$ctrl.recipe.description" required>
+                </textarea>
+                <div ng-show="recipe.description.$invalid && !recipe.description.$pristine" class="error-msg">Description can not be empty.</div>
+            </div>
+            <div class="input-container">
+                <label class="modal-label">Ingredients</label>
+                <div class="ingredients">
+                    <div class="ingredients-label name">Name</div>
+                    <div class="ingredients-label units-label">Units</div>
+                </div>
+                <div class="ingredients" ng-repeat="ingredient in $ctrl.recipe.ingredients track by $index">
+                    <input name="ingredName" type="text" class="modal-input name" ng-model="ingredient.name" required />
+                    <input name="ingredInits" type="text" class="modal-input units" ng-model="ingredient.units" required />
+                    <span class="cross-sign" ng-click="$ctrl.deleteIngredient($index)">&times;</span>
+                </div>
+                <div class="ingredients"> 
+                    <div ng-show="recipe.ingredName.$invalid && !recipe.ingredName.$pristine" class="error-msg">Name can not be empty.</div>
+                    <div ng-show="recipe.ingredInits.$invalid && !recipe.ingredInits.$pristine" class="error-msg">Units can not be empty.</div>
+                </div>
+                <div class="sign-container">
+                    <span class="add-sign" ng-click="$ctrl.addIngredient()">&#43;</span>
+                </div>
+            </div>
+            <div class="input-container">
+                <label class="modal-label">Instructions</label>
+                <textarea name="instructions" class="modal-input modal-textarea" rows="3" ng-model="$ctrl.recipe.instructions" required></textarea>
+                <div ng-show="recipe.instructions.$invalid && !recipe.instructions.$pristine" class="error-msg">Instructions can not be empty.</div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <input class="modal-btn add-btn" type="submit" name="add" value="{{ $ctrl.header }}" ng-disabled="recipe.$invalid" />
+            <input class="modal-btn cancel-btn" type="button" name="cancel" value="Cancel" ng-click="$ctrl.openModal()" />
+        </div>
+    </form>
+
+</section>

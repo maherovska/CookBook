@@ -1,0 +1,95 @@
+﻿.single-recipe {
+    background-color: #ebffc6;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    min-height: calc(100vh - 270px);
+    padding: 20px;
+}
+
+.single-recipe .back-btn {
+    align-items: center;
+    color: #5cb85c;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    width: 120px;
+}
+
+.single-recipe .back-btn:hover {
+    text-decoration: underline;
+}
+
+.single-recipe .back-btn > img {
+    cursor: pointer;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+}
+
+.single-recipe .recipe-date {
+    color: rgb(112, 114, 116);
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    text-align: right;
+}
+
+.single-recipe .recipe-title {
+    font-size: 32px;
+    margin: 10px;
+    text-align: center;
+}
+
+.single-recipe .recipe-description,
+.single-recipe .instruction {
+    font-size: 17px;
+}
+
+.single-recipe .ingredients-content {
+    display: flex;
+}
+
+.ingredients-content > img {
+    border-radius: 5px;
+    height: 200px;
+    width: 200px;
+}
+
+.ingredients > h3 {
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+.ingredients .ingredients-list > li {
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    .single-recipe .recipe-title {
+        font-size: 26px;
+    }
+
+    .single-recipe .recipe-date {
+        font-size: 16px;
+    }
+
+    .ingredients-content > img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .ingredients-content > img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .single-recipe .ingredients-content {
+        flex-wrap: wrap;
+    }
+}

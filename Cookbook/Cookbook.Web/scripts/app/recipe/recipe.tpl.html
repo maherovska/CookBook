@@ -1,0 +1,21 @@
+﻿<article class="single-recipe">
+    <h1 class="recipe-title">{{ $ctrl.recipe.title }}</h1>
+    <p class="recipe-date">{{ $ctrl.recipe.dateCreated | date:'fullDate' }}</p>
+    <p class="recipe-description">{{ $ctrl.recipe.description }}</p>
+    <section class="ingredients-content">
+        <img src="../Content/images/recipe.png" alt="" />
+        <section class="ingredients">
+            <h3>Ingredients:</h3>
+            <ul class="ingredients-list">
+                <li ng-repeat="ingredient in $ctrl.recipe.ingredients">
+                    {{ ingredient.units }} {{ ingredient.name }}
+                </li>
+            </ul>
+        </section>
+    </section>
+    <p class="instruction">{{ $ctrl.recipe.instructions }}</p>
+    <div class="back-btn" ng-click="$ctrl.goToList()">
+        <img src="../Content/images/back-bnt.png" />
+        Back to list
+    </div>
+</article>

@@ -1,0 +1,14 @@
+﻿<section class="modal" ng-submit="" ng-class="$ctrl.showAlert ? 'modal-opened' : ''">
+
+    <!-- Modal content -->
+    <form class="modal-content delete-modal" ng-submit="$ctrl.submitDeleting()">
+        <div class="modal-body">
+            <h1>Delete recipe '{{ $ctrl.recipe.title }}'?</h1>
+        </div>
+        <div class="modal-footer">
+            <input class="modal-btn add-btn" type="submit" name="add" value="Delete" />
+            <input class="modal-btn cancel-btn" type="button" name="cancel" value="Cancel" ng-click="$ctrl.openAlert()" />
+        </div>
+    </form>
+
+</section>

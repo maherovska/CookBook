@@ -1,0 +1,268 @@
+﻿.container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.header {
+    background-image: url(../Content/images/cooking-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    opacity: 0.6;
+}
+
+.header .header-text {
+    color: #fff;
+    cursor: pointer;
+    font-size: 72px;
+    font-weight: 600;
+    margin: auto;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.header .header-text:hover {
+    text-shadow: 2px 2px 8px #e52d3b;
+}
+
+.header .add-btn:hover {
+    background-color: #f9bd68;
+}
+/* end Header */
+
+/* Modal */
+.modal {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    padding-top: 60px;
+    position: fixed;    
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.modal-opened {
+    display: block;
+}
+
+.modal-content {
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 85%;
+    margin: auto;
+    overflow: auto;
+    padding: 0;
+    position: relative;
+    width: 35%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+}
+
+.delete-modal {
+    height: 160px;
+}
+
+@-webkit-keyframes animatetop {
+    from { top:-300px; opacity:0 } 
+    to { top:0; opacity:1 }
+}
+
+@keyframes animatetop {
+    from { top:-300px; opacity:0 }
+    to { top:0; opacity:1 }
+}
+
+.modal-header {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 2px 16px;
+}
+
+.modal-header .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-header .close:hover,
+.modal-header .close:focus {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px 16px;
+}
+
+.modal-footer .modal-btn {
+    border: 1px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 0 10px;
+    padding: 5px;
+    width: 100px;
+}
+
+.modal-footer > .add-btn {
+    background-color: #5cb85c;
+    border-color: #fff;
+    color: #fff;
+} 
+
+.modal-footer > .add-btn:hover {
+    background-color: #fff;
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.modal-footer > .add-btn[disabled], 
+.modal-footer > .add-btn[disabled]:hover {
+    background-color: #79c079;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.modal-footer > .cancel-btn {
+    background-color: #fff;
+    border-color: #e52d3b;
+    color: #e52d3b;
+}
+
+.modal-footer > .cancel-btn:hover {
+    background-color: #e52d3b;
+    border-color: #fff;
+    color: #fff;
+}
+
+.input-container {
+    margin: 10px 0;
+}
+
+.input-container .modal-label {
+    color: #5cb85c;
+    display: block;
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+.input-container .modal-input,
+.input-container .ingredients .modal-input {
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font: 16px normal;
+    height: 28px;
+    padding: 4px;
+    width: 100%;
+}
+
+.input-container .modal-textarea {
+    height: initial;
+    resize: none;
+}
+
+.input-container .ingredients {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5px;
+}
+
+.input-container .ingredients .name {
+    width: 60%;
+}
+
+.input-container .ingredients .units {
+    width: 30%;
+}
+
+.input-container .cross-sign {
+    color: #5b5b5b;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.input-container .error-msg {
+    font-size: 13px;
+    color: #e25660;
+}
+
+.sign-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sign-container .add-sign {
+    background-color: #5cb85c;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px 0;
+    padding: 0px 6px;
+}
+
+.ingredients .ingredients-label {
+    color: #5b5b5b;
+    font-size: 13px;
+}
+
+.ingredients .units-label {
+    width: calc(30% + 20px);
+}
+
+/* end Modal */
+
+
+@media (max-width: 991px) {
+    .modal-content {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 75%;
+    }
+
+    .modal-body > h1 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        height: 120px;
+    }
+
+    .header .header-text {
+        font-size: 56px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}

@@ -1,0 +1,33 @@
+﻿<section class="list-recipe-header">
+    <button class="add-btn" ng-click="$ctrl.addRecipe()">Add new</button>
+    <section class="dropdown">
+        <button class="dropbtn">Order by</button>
+        <div class="dropdown-content">
+            <a ng-class="$ctrl.orderIndex == order.index ? 'active' : ''" ng-repeat="order in $ctrl.orderList" ng-click="$ctrl.setActiveOrderIndex(order.index)">
+                {{ order.title }}
+            </a>
+        </div>
+    </section>    
+</section>
+
+<article class="content">
+    <section class="recipe" ng-repeat="recipe in $ctrl.recipes | orderBy:$ctrl.orderList[$ctrl.orderIndex].name:$ctrl.orderList[$ctrl.orderIndex].reverse">
+        <img src="../Content/images/recipe.png" alt="" class="img" />
+        <div class="recipe-content" ng-click="$ctrl.openRecipe(recipe.id)">
+            <p class="title">
+                {{ recipe.title }}
+            </p>
+            <p class="date">
+                {{ recipe.dateCreated | date }}
+            </p>
+            <p class="description">
+                {{ recipe.description }}
+            </p>
+        </div>
+        <img src="../Content/images/delete.png" alt="" class="delete" ng-click="$ctrl.deleteRecipe(recipe)" />
+        <img src="../Content/images/edit.png" alt="" class="edit" ng-click="$ctrl.editRecipe(recipe)" />
+    </section>
+</article>
+
+<ng-include src="'../scripts/app/shared/add-modal.tpl.html'"></ng-include>
+<ng-include src="'../scripts/app/shared/delete-alert.tpl.html'"></ng-include>
